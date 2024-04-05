@@ -1,4 +1,3 @@
-from sklearn.preprocessing import LabelBinarizer
 from tensorflow import keras
 from PIL import Image
 from keras.applications.imagenet_utils import preprocess_input, decode_predictions
