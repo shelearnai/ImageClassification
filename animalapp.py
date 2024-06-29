@@ -24,7 +24,7 @@ def get_best_model():
 st.subheader('Classify the image')
 image_file = st.file_uploader('Choose the Image', ['jpg', 'png'])
 print(image_file)
-
+st.image(image_file, caption='Pet Image', use_column_width=True)
 
 if image_file is not None:
     
@@ -42,4 +42,5 @@ if image_file is not None:
         prediction = 'Dog'
     else:
         prediction = 'Cat'
-    st.write(f'The image is predicted as {prediction}')
+    st.markdown(f'<h3>The image is predicted as {prediction}.</h3>', unsafe_allow_html=True)
+
